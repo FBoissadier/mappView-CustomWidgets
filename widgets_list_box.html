@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="widgets_screenshot.html">
+        <link rel="prev" href="widgets_toggle_switch.html">
       
       
-        <link rel="next" href="widgets_toggle_switch.html">
+        <link rel="next" href="revision.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Transfer - mappView custom widgets</title>
+        <title>ListBox - mappView custom widgets</title>
       
     
     
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Transfer
+              ListBox
             
           </span>
         </div>
@@ -322,6 +322,46 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="widgets_transfer.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transfer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="widgets_toggle_switch.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ToggleSwitch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -336,18 +376,18 @@
           
   
   <span class="md-ellipsis">
-    Transfer
+    ListBox
   </span>
   
 
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="widgets_transfer.html" class="md-nav__link md-nav__link--active">
+      <a href="widgets_list_box.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Transfer
+    ListBox
   </span>
   
 
@@ -395,18 +435,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#additional-actions" class="md-nav__link">
+  <a href="#events" class="md-nav__link">
     <span class="md-ellipsis">
-      Additional Actions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#additional-events" class="md-nav__link">
-    <span class="md-ellipsis">
-      Additional Events
+      Events
     </span>
   </a>
   
@@ -427,6 +458,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#todos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Todos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#revision-history" class="md-nav__link">
     <span class="md-ellipsis">
       Revision History
@@ -435,15 +475,6 @@
   
     <nav class="md-nav" aria-label="Revision History">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#version-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Version 2
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#version-1" class="md-nav__link">
@@ -463,46 +494,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="widgets_toggle_switch.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ToggleSwitch
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="widgets_list_box.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ListBox
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -545,77 +536,65 @@
   
 
 
-  <h1>Transfer</h1>
+  <h1>ListBox</h1>
 
 <h2 id="description">Description</h2>
-<p>This widgets allows the user to transfer files between the PLC and the client system through the HMI. </p>
+<p>This widgets extends the standard list box. Adding 1 styling property <strong>itemMargin</strong> and 1 event <strong>itemClick</strong></p>
 <h2 id="usage">Usage</h2>
-<p>This widget requires mapp File (see Automation Studio help GUID f5ac430b-e0ca-4320-bcd0-b7e28a087f77). The libraries <strong>MpFile</strong>, <strong>MpBase</strong> and <strong>MpServer</strong> are required and must be added to project. Make sure that there is a valid mpfilemanager configuration. The image shows a valid sample configuration.</p>
-<p><img alt="" src="images/transfer1.png" /></p>
-<p>The file device USER can be used without any additional configuration. All other file devices require a file device configuration. The file device configuration can be found in the target system configuration.</p>
+<p>The following additional functions are available</p>
+<ul>
+<li>Additional property itemMargin</li>
+</ul>
 <h4 id="properties">Properties</h4>
-<p><strong>maxFileSize</strong></p>
-<p>This is the maximum size of the transferred file. Larger files will generate an error. The maxiumum value may vary on PLC performance and should be between 1.000 - 10.000.000 bytes. Values larger than 10 MB will be rejected.</p>
-<h4 id="additional-actions">Additional Actions</h4>
-<p>The widget derives all actions from the button widget.</p>
-<p><strong>Download</strong>
-This action downloads a file from the PLC to the client.</p>
+<p><strong>itemMargin</strong></p>
+<p>This property is use to apply maring to all items in the list.</p>
 <ul>
-<li>filePath - Full path to the file including the device name, filename and extension. Do <strong>NOT</strong> add 'FileDevice:' before the device name!</li>
+<li>With <strong>itemMargin</strong> set to <code>0px 0px 10px 0px</code> here is the result<blockquote>
+<p><img alt="💡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f4a1.svg" title=":bulb:" /> <strong>Tip:</strong> Set property <strong>listSeparatorcolor</strong> to <code>rgba(0,0,0,0)</code> to disable line separator in the list</p>
+</blockquote>
+</li>
 </ul>
-<p>Example</p>
-<p>mappDir/screenshot.png</p>
-<p>mappDir is the device name specified in the target system configuration.</p>
-<p><strong>Upload</strong>
-This action uploads a file and saves it on the PLC.</p>
+<p><img alt="" src="images/listbox1.png" />
+<img alt="" src="images/listbox2.png" /></p>
+<h4 id="events">Events</h4>
+<p><strong>itemClick</strong></p>
+<p>This event is fired whenever you click on a item, not the entire widget.</p>
 <ul>
-<li>filePath - Directory where the file should be saved. Do <strong>NOT</strong> add 'FileDevice:' before the device name!</li>
+<li>Argurments :<ul>
+<li><strong>clickedValue</strong> (String): Value of the item clicked</li>
+<li><strong>clickedText</strong> (String): Text of the item clicked</li>
+<li><strong>clickedIndex</strong> (Integer): Index of the item clicked</li>
 </ul>
-<p>Example</p>
-<p>mappUser/</p>
-<h4 id="additional-events">Additional Events</h4>
-<p>The widget derives all events from the button widget.</p>
-<p><strong>FileSaved</strong></p>
-<p>This event is called when the file was saved on the PLC after an upload action. Returns the full path of the file (filePath).</p>
-<p><strong>FileDownloaded</strong></p>
-<p>This event is called when the file was downloaded successful. </p>
-<p><strong>OnError</strong></p>
-<p>This event is called when a transfer was not successful. Returns the error number (result). Most error numbers are generated from underlying components and can be found in the Automation Studio help. The widget can also generate the following custom error numbers.</p>
-<table>
-<thead>
-<tr>
-<th>Error No</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>10000</td>
-<td>Unknown error. Can occur when the user aborts the screenshot</td>
-</tr>
-<tr>
-<td>10101</td>
-<td>File size error. The file larger than the parameter maxFileSize</td>
-</tr>
-<tr>
-<td>10102</td>
-<td>File parameter error. The value for maxFileSize should be between 1.000 - 10.000.000 bytes</td>
-</tr>
-</tbody>
-</table>
+</li>
+</ul>
+<p>Here is an application to this event:</p>
+<ul>
+<li>You want to create a list of selection from an array containing equipement but not the complete array.</li>
+<li>You created a dataProvider with <code>{"value": "IndexInTheArray", "text": "IdentifierForTheEquipement"}</code></li>
+<li>Here is initial state in the visualization</li>
+</ul>
+<p><img alt="" src="images/listbox3.png" /></p>
+<ul>
+<li>Then when you click on the first item in the list, here is the result</li>
+</ul>
+<p><img alt="" src="images/listbox4.png" /></p>
+<blockquote>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/26a0.svg" title=":warning:" /> <strong>Warning:</strong> Text returned by the event in argument <strong>clickedText</strong>, if it's localized text, event return the raw text translation in the current language of the session</p>
+<p><img alt="📝" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f4dd.svg" title=":memo:" /> <strong>Note:</strong> This cannot be done using <strong>SelectedIndexChanged</strong> event, because index didn't change.</p>
+<p><img alt="📝" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f4dd.svg" title=":memo:" /> <strong>Note 2:</strong> This also prevent the usage of <strong>Click</strong> event on the complete widget and fired an event when user didn't click on a item.</p>
+</blockquote>
 <h2 id="requirements">Requirements</h2>
 <p>Tested with</p>
 <ul>
-<li>Automation Studio 4.12</li>
-<li>Minimum tested version 5.15</li>
-<li>Expected to work with later version</li>
+<li>Automation Studio 4.9.5.36</li>
+<li>mappView 5.24</li>
 </ul>
 <p>May also work with lower version: <strong>YES</strong></p>
-<h2 id="revision-history">Revision History</h2>
-<h5 id="version-2">Version 2</h5>
-<ul>
-<li>Fixed upload same file twice does not work</li>
+<h2 id="todos">Todos</h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Adding argument <strong>clickedTmxTextKey</strong> to <strong>itemClick</strong> event if text is localized using text system</li>
 </ul>
+<h2 id="revision-history">Revision History</h2>
 <h5 id="version-1">Version 1</h5>
 <ul>
 <li>First release</li>
