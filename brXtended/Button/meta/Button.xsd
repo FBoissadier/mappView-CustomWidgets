@@ -70,6 +70,7 @@
 			<xs:attribute name="hoverBackGroundGradientExt" use="optional" type="types:Gradient" default="" />
 			<xs:attribute name="hoverImageColorExt" use="optional" type="types:Color" default="#000000" />
 			<xs:attribute name="hoverShadowExt" use="optional" type="types:Shadow" default="none" />
+			<xs:attribute name="hoverTransitionTimeExt" use="optional" type="types:String" default="0s" />
 
 
 

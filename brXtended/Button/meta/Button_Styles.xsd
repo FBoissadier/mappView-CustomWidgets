@@ -47,6 +47,8 @@
 				<xs:attribute name="hoverBackGroundGradientExt" use="optional" type="kt:Gradient"></xs:attribute>
 				<xs:attribute name="hoverImageColorExt" use="optional" type="kt:Color"></xs:attribute>
 				<xs:attribute name="hoverShadowExt" use="optional" type="kt:Shadow"></xs:attribute>
+				<xs:attribute name="hoverTransitionTimeExt" use="optional" type="types:String" default="0s" />
+
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>

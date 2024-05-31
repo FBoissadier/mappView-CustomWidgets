@@ -133,12 +133,15 @@
   border-width: 2px;
   background-color: #ff8800;
   box-shadow: none;
+  transition: 0s;
 }
 .widgets_brXtended_Button_style_default:not(.disabled).hoverEnabledExt:hover span{
   color:#ffffff;
+  transition: 0s;
 }
 .widgets_brXtended_Button_style_default:not(.disabled).hoverEnabledExt:hover svg{
   fill: #000000;
+  transition: 0s;
 }
 
 

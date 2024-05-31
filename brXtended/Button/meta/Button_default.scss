@@ -164,13 +164,16 @@
 		background-color: #ff8800;
 		@include backGroundGradient('');
 		@include box-shadow('none');
+		transition: 0s;
 	}
 	&:not(.disabled).hoverEnabledExt:hover span{
 		color: #ffffff;
+		transition: 0s;
 	}
 
 	&:not(.disabled).hoverEnabledExt:hover svg{
 		fill: #000000;
+		transition: 0s;
 	}
 
 }

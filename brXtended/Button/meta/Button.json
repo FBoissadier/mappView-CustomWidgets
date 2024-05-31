@@ -2194,6 +2194,37 @@
         "Description": [
           "Shadow of the Widget when hovered and button is enable"
         ]
+      },
+      {
+        "$": {
+          "name": "hoverTransitionTimeExt",
+          "type": "String",
+          "category": "Extended",
+          "default": "0s"
+        },
+        "StyleElement": [
+          {
+            "$": {
+              "selector": "&:not(.disabled).hoverEnabledExt:hover",
+              "attribute": "transition"
+            }
+          },
+          {
+            "$": {
+              "selector": "&:not(.disabled).hoverEnabledExt:hover span",
+              "attribute": "transition"
+            }
+          },
+          {
+            "$": {
+              "selector": "&:not(.disabled).hoverEnabledExt:hover svg",
+              "attribute": "transition"
+            }
+          }
+        ],
+        "Description": [
+          "Set transition time (1s, 500ms ...) when hovered and button is enable"
+        ]
       }
     ],
     "$": {}
