@@ -5,4 +5,6 @@
 	<Schema href="NumericInput/meta/NumericInput_EventsActions.xsd" targetNamespace="http://www.br-automation.com/iat2014/eventbinding/v2" />
 	<Schema href="Screenshot/meta/Screenshot_EventsActions.xsd" targetNamespace="http://www.br-automation.com/iat2014/eventbinding/v2" />
 	<Schema href="ToggleSwitch/meta/ToggleSwitch_EventsActions.xsd" targetNamespace="http://www.br-automation.com/iat2014/eventbinding/v2" />
+	<Schema href="Button/meta/Button_EventsActions.xsd" targetNamespace="http://www.br-automation.com/iat2014/eventbinding/v2" />
+
 </SchemaCatalog>

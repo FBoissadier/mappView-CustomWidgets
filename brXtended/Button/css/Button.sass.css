@@ -1,0 +1,135 @@
+.brXtendedButton {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-sizing: border-box;
+  width: 100px;
+  height: 30px;
+  padding: 0 10px;
+  background: #fff;
+  border: 2px solid #5b7c70;
+  font-family: Arial;
+  font-size: 12px;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+  background-size: 100% 100%;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  justify-content: center;
+  text-align: center;
+}
+.brXtendedButton span {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  pointer-events: none;
+  margin: 0;
+  padding: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+.brXtendedButton span.down {
+  display: none;
+}
+.brXtendedButton img,
+.brXtendedButton svg {
+  display: inline-block;
+  vertical-align: middle;
+  pointer-events: none;
+  padding: 0;
+  margin: 0;
+  -ms-flex: none;
+  flex: none;
+}
+.brXtendedButton.image-left img,
+.brXtendedButton.image-left svg {
+  margin: 0 10px 0 0;
+}
+.brXtendedButton.image-right img,
+.brXtendedButton.image-right svg {
+  margin: 0 0 0 10px;
+}
+.brXtendedButton.image-top {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.brXtendedButton.image-top img,
+.brXtendedButton.image-top svg {
+  margin: 0 0 5px 0;
+}
+.brXtendedButton.image-top span {
+  width: 100%;
+}
+.brXtendedButton.image-bottom {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.brXtendedButton.image-bottom img,
+.brXtendedButton.image-bottom svg {
+  margin: 5px 0 0 0;
+}
+.brXtendedButton.image-bottom span {
+  width: 100%;
+}
+.brXtendedButton.ellipsis span {
+  text-overflow: ellipsis;
+}
+.brXtendedButton.multiLine span {
+  white-space: pre;
+}
+.brXtendedButton.breakWord span {
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+.brXtendedButton.wordWrap span {
+  white-space: pre-wrap;
+}
+.brXtendedButton:focus,
+.brXtendedButton.focus {
+  outline: none;
+}
+.brXtendedButton.active .text,
+.brXtendedButton.checked .text {
+  color: #333;
+}
+.brXtendedButton.active span.up,
+.brXtendedButton.checked span.up {
+  display: none;
+}
+.brXtendedButton.active span.up:only-of-type,
+.brXtendedButton.checked span.up:only-of-type {
+  display: block;
+}
+.brXtendedButton.active span.down,
+.brXtendedButton.checked span.down {
+  display: block;
+}
+.brXtendedButton.disabled span {
+  color: #989898;
+}
+.brXtendedButton.disabled span.up {
+  display: block;
+}
+.brXtendedButton.disabled span.down {
+  display: none;
+}
+.brXtendedButton.disabled img {
+  opacity: 0.5;
+}
+.brXtendedButton.disabled.active .text,
+.brXtendedButton.disabled.checked .text {
+  color: #c8c8c8;
+}
