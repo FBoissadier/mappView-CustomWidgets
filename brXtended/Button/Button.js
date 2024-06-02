@@ -30,14 +30,12 @@ define(['widgets/brease/Button/Button'], function (SuperClass) {
             this.settings.omitClass = true;
         }
         SuperClass.prototype.init.call(this);
-        this.checkhoverEnabledExtClass(this.settings.enableHoverStylingExt);
+        this.checkHoverEnabledExtClass(this.settings.enableHoverStylingExt);
     };
 
-    p.checkhoverEnabledExtClass = function (hoverPropEnable) {
-        console.log(hoverPropEnable);
+    p.checkHoverEnabledExtClass = function (hoverPropEnable) {
         
         var className = "hoverEnabledExt";
-        console.log(this.el.hasClass(className));
         if(hoverPropEnable && !this.el.hasClass(className)){
             this.el.addClass(className);
         }
@@ -54,7 +52,7 @@ define(['widgets/brease/Button/Button'], function (SuperClass) {
      */
     p.setEnableHoverStylingExt = function setEnableHoverStylingExt(value) {
         this.settings.enableHoverStylingExt = value;
-        this.checkhoverEnabledExtClass(this.settings.enableHoverStylingExt);
+        this.checkHoverEnabledExtClass(this.settings.enableHoverStylingExt);
     };
 
     /**
