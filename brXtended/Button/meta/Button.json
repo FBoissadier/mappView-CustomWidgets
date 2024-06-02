@@ -2205,6 +2205,12 @@
         "StyleElement": [
           {
             "$": {
+              "selector": "&:not(.disabled).hoverEnabledExt",
+              "attribute": "transition"
+            }
+          },
+          {
+            "$": {
               "selector": "&:not(.disabled).hoverEnabledExt:hover",
               "attribute": "transition"
             }
