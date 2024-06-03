@@ -534,6 +534,8 @@ This property has no effect, if multiLine=false				</Description>
 			</StyleProperty>
 			<StyleProperty name="hoverTransitionTimeExt" category="Extended" type="String" default="0s">
 				<StyleElement selector="&amp;:not(.disabled).hoverEnabledExt" attribute="transition"/>
+				<StyleElement selector="&amp;:not(.disabled).hoverEnabledExt span" attribute="transition"/>
+				<StyleElement selector="&amp;:not(.disabled).hoverEnabledExt svg" attribute="transition"/>
 				<StyleElement selector="&amp;:not(.disabled).hoverEnabledExt:hover" attribute="transition"/>
 				<StyleElement selector="&amp;:not(.disabled).hoverEnabledExt:hover span" attribute="transition"/>
 				<StyleElement selector="&amp;:not(.disabled).hoverEnabledExt:hover svg" attribute="transition"/>

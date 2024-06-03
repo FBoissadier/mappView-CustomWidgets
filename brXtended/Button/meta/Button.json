@@ -2211,6 +2211,18 @@
           },
           {
             "$": {
+              "selector": "&:not(.disabled).hoverEnabledExt span",
+              "attribute": "transition"
+            }
+          },
+          {
+            "$": {
+              "selector": "&:not(.disabled).hoverEnabledExt svg",
+              "attribute": "transition"
+            }
+          },
+          {
+            "$": {
               "selector": "&:not(.disabled).hoverEnabledExt:hover",
               "attribute": "transition"
             }
