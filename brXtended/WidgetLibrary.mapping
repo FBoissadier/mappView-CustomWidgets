@@ -54,4 +54,8 @@
   <Mapping parameter="widgets.brXtended.ToggleSwitch.Action.SetValueBool.value" type="BOOL"/>
   <Mapping parameter="widgets.brXtended.ToggleSwitch.Action.SetValueInteger.value" type="ANY_INT"/>
   <Mapping parameter="widgets.brXtended.ToggleSwitch.Action.SetVisible.value" type="BOOL"/>
+  <Mapping parameter="widgets.brXtended.UserList.Action.GoToPage.value" type="ANY_INT"/>
+  <Mapping parameter="widgets.brXtended.UserList.Action.SetEnable.value" type="BOOL"/>
+  <Mapping parameter="widgets.brXtended.UserList.Action.SetStyle.value" type="ANY_STRING"/>
+  <Mapping parameter="widgets.brXtended.UserList.Action.SetVisible.value" type="BOOL"/>
 </Mappings>
